@@ -49,7 +49,7 @@ for km in ridesharing_distance:
     def dance(self):
         print(f"{self.name}  is dancing ")
         self.battery = self.battery-10
-        
+        nklfryhkulju.lkjf.kjghsdwek
     def battery_status(self):
         print(f"BATTERY : {self.battery}%")
         
@@ -282,29 +282,304 @@ account.check_balance()
 '''
 
     
-    
-    
-    
+###_____________________________________________________________________
+'''
+name =['siam','rafi','hadi']
+math_marks =[33,40,50]
+english_marks = [60,70,72]
+bangla_marks = [50,60,70]'''
+
+'''
+student_info={
+    "siam": [40,33,24],
+    "sazid":[23,50,80],
+    "rafi":[30,40,50]
+       
+}
+
+
+
+def avg_calculate(marks):
+    total= sum(marks)
+    avg = total/3
+    return avg
+
+
+def check_status(marks):
+    for numbers in range(len(marks)):
+        if marks[numbers]<33:
+            return 'fail'
+        else:
+            return 'pass'
         
+        
+Top_student=""
+highest_avg=0.0
+
+
+for name,marks in student_info.items():
+    average = avg_calculate(marks)
+    status = check_status(marks)
+    
+    print(f"{name} -> Average: {average} | Status: {status}")
+
+    if average > highest_avg:
+        highest_avg = average
+        top_student = name
+        
+print("-" * 35)
+print(f"🏆 Top Student: {top_student}")'''
+
+
+
+####################################################
+'''
+def encode(message):
+    
+    reverse_message = message[::-1]
+    
+    encoded = ""
+    vowels = "aeiouAEIOU"
+    
+    for character in reverse_message :
+    
+      if character in vowels:
+          encoded += "*"
+      else:
+          encoded += character
+    return encoded
+
+
+message = input("enter massage: ")
+encoded_massage = encode(message)
+    
+    
+print("Encoded Message:", encoded_massage ) '''
+
+
+
+
+######################################################
+
+''' email generator 
+
+def generate_email(first_name,last_name,company_name):
+    return first_name + last_name +"@"+company_name+".com"
+
+ 
+ 
+ 
+first_name = input("enter your first name : ") 
+last_name = input("enter your last name: ") 
+company_name = input("enter your company name: ")
+
+
+email = generate_email(first_name,last_name,company_name)
+
+print("Generated_email:",email)'''
+ 
+ 
+ 
+ 
+ ##__________________________________________________
+ 
+ 
+ 
+'''employees = {
+    "ema":{
+        "bonus":500,
+        "salary":10000
+           
+    },
+     
+    "rafi":{
+        "bonus":500,
+        "salary":20000
+            
+    } ,
+    
+    "siam":{
+        
+        "bonus":500,
+        "salary":20000
+        
+    }
+       
+ }
+
+for name,info in employees.items():
+    
+    total = info["salary"] + info["bonus"] 
+    
+    print(f"{name} : ${total}")'''
+    
+    
+    
+    
+    
+### mini tool 
+
+'''def split_bill(total_bill,people):
+    if people == 0:
+        return "invalid number of people " 
+    else :
+        return total_bill/people
+
+     
+total_bill = float(input("enter bill amount : ")) 
+people = int(input ("number of people : "))
+
+
+print(f"Each person bill:${split_bill(total_bill,people)} ")     '''
+     
+     
+#############################
+''' 
+ 
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80 :
+        return "A"
+    elif marks>= 65:
+        return "B"
+    elif marks>= 40:
+        return "C"
+    else: 
+        return "F"
+    
+    
+    
+name = input("enter your name :  ")
+department = input("department name : ")
+marks =int(input("enter your marks: "))
+
+Grade = calculate_grade(marks)
+
+
+if  Grade == "F":
+    status = "Fail"
+    
+else :
+    status = "Pass-------------you are lucky this time"
+
+
+
+
+print ("\n ----------------RESULT---------------")
+print (f"student name : {name}")
+print (f"department : {department}")
+print (f"marks : {marks}")
+print (f"Grade : {Grade}")
+print (f"Status : {status}")'''
+    
+    
+    
+#######################
+
     
 
+    
+'''class SmartFan:
+    def __init__(self):
+        self.power = "off"
+        self.speed = 0
+        
+        
+    def turn_on(self):
+        self.power = "on"
+        print("fan turned on")
+        
+        
+    def turn_off(self):
+        self.power = "off"
+        self.speed = 0
+        print ("fan turned off")
+        
+        
+    def set_speed(self,speed):
+        if self.power =="off":
+            print("turn on fan first!!")
+            
+        elif 1<= speed <=5:
+            self.speed = speed
+            print(f"Fan speed is :  {self.speed}")
+            
+        else :
+            print ("Invalid speed")
+            
+            
+            
+    def show_status (self):
+        
+        
+        
+        print("\n -------------FAN STATUS---------------")
+        print(f"Fan power : {self.power}")
+        print(f"Fan speed : {self.speed}")   '''     
 
 
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-     
-     
-     
-     
+
+class SmartFan:
+
+    def __init__(self):
+        self.power = "OFF"
+        self.speed = 0
+
+    def turn_on(self):
+        self.power = "ON"
+        print("Fan Turned ON")
+
+    def turn_off(self):
+        self.power = "OFF"
+        self.speed = 0
+        print("Fan Turned OFF")
+
+    def set_speed(self, speed):
+
+        if self.power == "OFF":
+            print("Turn ON the fan first!")
+
+        elif 1 <= speed <= 5:
+            self.speed = speed
+            print(f"Fan Speed: {self.speed}")
+
+        else:
+            print("Invalid Speed")
+
+    def show_status(self):
+
+        print("\n========== FAN STATUS ==========")
+        print(f"Power : {self.power}")
+        print(f"Speed : {self.speed}")
+        print("================================")
+
+
+# ---------------------------
+# Object Create
+# ---------------------------
+
+fan = SmartFan()
+
+fan.show_status()
+
+fan.turn_on()
+
+fan.set_speed(4)
+
+fan.show_status()
+
+fan.turn_off()
+
+fan.show_status()
+
+
+
+
+
+
+
+
+
        
